@@ -34,7 +34,7 @@ router.get('/:id' , ensureAuth, async(req,res) => {
 
 //@desc   User stories 
 //route GET /stories/user/:id
-router.get('/user/:userId' , ensureAuth, async(req,res) => {
+router.get('/user/:id' , ensureAuth, async(req,res) => {
     try{
         const stories = await Story.find({
             user:req.params.id,
